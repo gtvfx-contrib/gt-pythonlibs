@@ -1,0 +1,13 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    uses: gtvfx-contrib/gt-envoy_utils/.github/workflows/bundle-publish.yml@v0.1.0
+    secrets: inherit
+    permissions:
+      contents: write
